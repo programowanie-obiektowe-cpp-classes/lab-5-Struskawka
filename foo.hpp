@@ -7,9 +7,24 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {
-    // Twoja implementacja tutaj
-    return {};
+    using namespace std;
+
+    vector<char>zwierzeta;
+    auto i = people.rbegin();
+
+      for(i; i!=people.rend(); i++){
+        
+        i->birthday();
+        
+        if(i->isMonster()) {zwierzeta.push_back('n');}
+        else {zwierzeta.push_back('y');}
+        
+    };
+    return zwierzeta;
+    
 }
+
+
 /*Twoim zadaniem jest napisanie w pliku `foo.hpp` funkcji `foo`, która:
 
 - Przyjmuje przez referencję listę obiektów typu `Human`.
